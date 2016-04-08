@@ -10,18 +10,18 @@ def merge(left,right):
     i=j=0
     while(i<len(left) and j<len(right)):# 将每个数组的元素相比较
         if left[i]<right[j]:# 改变这里大小可以改变排序
-            c.append(left[i])
+            c.append(left[i])# 将合适的数组增加到c数组中
             i=i+1
         else:
-            c.append(right[j])
+            c.append(right[j])# 将合适的数组增加到c数组中
             j=j+1
     # 下面两个while循环是防止两个数组相等而设置的，
     # 把多出来的数组元素直接加到c数组中
     while(i<len(left)):
-        c.append(left[i])
+        c.append(left[i])# 将剩下的元素增加到c数组中
         i=i+1
     while(j<len(right)):
-        c.append(right[j])
+        c.append(right[j])# 将剩下的元素增加到c数组中
         j=j+1
     return c
 
