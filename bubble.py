@@ -19,7 +19,7 @@ def bubblesort(array):
 	return array
 
 start = datetime.now().second# 开始时间
-print(bubblesort(array))# 输出前一百个
+print(bubblesort(array)[:100])# 输出前一百个
 end = datetime.now().second# 结束时间
 
 print float(end-start)#运行经历时间
