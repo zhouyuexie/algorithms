@@ -1,8 +1,13 @@
 #-*-coding:utf-8-*-
 '归并算法：将已有序的子序列合并得到完全有序的序列。先使每个子序列有序，再使子序列段间有序'
 
+from datetime import datetime
+import random
 
-a=[3,5,1,5,7,3,7,2,9,0,45,72,345,231,8,25,17,78,1,9,99,7,233]
+# 生成一个随机数组
+array = []
+for x in range(0,10000):
+    array.append(random.randint(0,100000))
 
 # 这是直接合并两个‘有序’数组的算法
 def merge(left,right):
@@ -34,4 +39,8 @@ def mergesort(array):
 	right = mergesort(array[mid:])# 切片操作，右数组
 	return merge(left,right)
 
-print(mergesort(a))
+start = datetime.now().microsecond# 开始时间
+print(mergesort(array))
+end = datetime.now().microsecond# 结束时间
+
+print float(end-start)/1000000#运行经历时间

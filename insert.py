@@ -2,8 +2,12 @@
 '插入排序：将无序的数据序列插入到一个有序的数据序列，要求插入后仍然有序'
 
 from datetime import datetime
+import random
 
-a=[3,5,1,5,7,3,7,2,9,0,45,72,345,231,8,25,17,78,1,9,99,7,233]
+# 生成一个随机数组
+array = []
+for x in range(0,10000):
+	array.append(random.randint(0,100000))
 
 # 相当于玩扑克牌，从桌上一个个的拿牌，和手上的牌一个个比较，插入到合适的位置
 # 不过下面的算法是当前序列（数组）排序，没有利用其他数组
@@ -17,4 +21,8 @@ def insert_sort(a):
 			i = i-1# 继续和下一个元素比较
 	return a
 
-print(insert_sort(a))
+start = datetime.now().second# 开始时间
+print(insert_sort(array))
+end = datetime.now().second# 结束时间
+
+print float(end-start)#运行经历时间
