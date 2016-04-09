@@ -1,5 +1,5 @@
 #-*-coding:utf-8-*-
-'快速排序：是对冒泡排序的一种改进。'
+"""快速排序：是对冒泡排序的一种改进。"""
 from datetime import datetime
 import random
 
